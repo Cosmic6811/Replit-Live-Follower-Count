@@ -2,7 +2,6 @@ import os
 import requests
 from colors import *
 
-import datetime
 import threading
 
 global yo;
@@ -25,13 +24,10 @@ app = Flask(__name__, template_folder=template_dir)
 
 @app.route("/api/<username>")
 def api(username):
-    dt = datetime.datetime.now()
     printit(username)
     print(f"REQUEST: {username}")
-    with open("log.txt","a+") as f:
-        dt_string = dt.strftime("%d/%m/%Y | %H:%M:%S")
-        logText = f"\nRequest: {username} - {dt_string}"
-        f.write(logText)
+    with open("log.txt","a") as f:
+        f.write(f"\nRequest: {username}")
     global yo;
     return str(yo)
 
@@ -50,3 +46,4 @@ def index(username):
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
+
