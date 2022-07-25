@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ username }} has</h1>
+<h1 style="font-size:90px" class="odometer" id="cnt">0</h1>
+<h1>Followers!</h1>
+    <p>
+    (follow or unfollow <a target="_blank" href="https://replit.com/@{{ username }}">{{ username }}</a> to see it change!)
+      <br/>
+     (dont forget to like!) 
+    </p>
+{% endblock %}
+{% block other %}
+<script>
+    function fetchf() {
+           fetch('/api/{{ username }}').then((y) => y.text()).then((e) => {
+        document.getElementById("cnt").innerHTML = e
+    })
+    }
+    setInterval(() => {
+  fetchf()
+    }, 1000)
+  fetchf()
+  </script>
+{% endblock %}
