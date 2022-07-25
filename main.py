@@ -2,7 +2,7 @@ import os
 import requests
 from colors import *
 
-
+import datetime
 import threading
 
 global yo;
@@ -14,7 +14,7 @@ def printit(username):
   global yo;
   
   yo = profile[profile.find('followerCount')+15: profile.find('followerCount')+30].lower().replace('a','').replace('b','').replace('c','').replace('d','').replace('e','').replace('f','').replace('g','').replace('h','').replace('i','').replace('j','').replace('k','').replace('l','').replace('m','').replace('n','').replace('o','').replace('p','').replace('q','').replace('r','').replace('s','').replace('t','').replace('u','').replace('v','').replace('w','').replace('x','').replace('y','').replace('z','').replace(',','').replace('"','')
-  
+
   print(f"{bright_blue}e {Blue}e{bright_blue}:{bright_yellow}",yo,reset,"\n")
 
 
@@ -25,10 +25,13 @@ app = Flask(__name__, template_folder=template_dir)
 
 @app.route("/api/<username>")
 def api(username):
+    dt = datetime.datetime.now()
     printit(username)
     print(f"REQUEST: {username}")
-    with open("log.txt","a") as f:
-        f.write(f"\nRequest: {username}")
+    with open("log.txt","a+") as f:
+        dt_string = dt.strftime("%d/%m/%Y | %H:%M:%S")
+        logText = f"\nRequest: {username} - {dt_string}"
+        f.write(logText)
     global yo;
     return str(yo)
 
