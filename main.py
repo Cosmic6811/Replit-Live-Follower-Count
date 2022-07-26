@@ -8,7 +8,7 @@ import threading
 global yo;
 yo = 0;
 
-current_version = "2.3.2"
+current_version = "2.3.3"
 
 def printit(username):
   threading.Timer(2.0, printit,).start()

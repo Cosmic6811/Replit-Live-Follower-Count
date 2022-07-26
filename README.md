@@ -15,7 +15,7 @@ Special Thanks to
 * [Buddy](https://replit.com/@bddy) 
 * [Icemaster](https://replit.com/@IcemasterEric)
 
-## To do:
+## To Do / Future Features:
 1. Integrate graphql
 2. Add login system
 4. User dashboard
