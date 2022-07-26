@@ -17,6 +17,9 @@ def printit(username):
 
   print(f"{bright_blue}e {Blue}e{bright_blue}:{bright_yellow}",yo,reset,"\n")
 
+def GQLver(username):
+    dataLoad = {}
+    pass
 
 from flask import Flask, send_file, redirect, render_template, request
 
@@ -41,11 +44,15 @@ def home():
         username = request.form["username"]
         return redirect(f'/{username}')
     return render_template('first.html')
+@app.get('/README.md')
+def readme():
+    with open("README.md","r") as f:
+        return str(f.read())
 @app.route("/<username>")
 def index(username):
-    if username == None:
+    '''if username == None:
         return redirect('/CosmicBear')
-    #entry = os.path.join('index.html')
+    #entry = os.path.join('index.html')'''
     return render_template("index.html",username=username)
 
 if __name__ == "__main__":

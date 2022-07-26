@@ -9,13 +9,14 @@ While the code works, it doesn't necessarily work *well*. I haven't coded in a w
 * [PikachuB2005](https://replit.com/@PikachuB2005) | Helper
 
 Special Thanks to
-* [Coder Gautam](https://replit.com/@CoderGautamYT)
-* [Buddy](https://replit.com/@bddy)
+* [Coder Gautam](https://replit.com/@CoderGautamYT) | Made original program
+* [Nathan Pham](https://replit.com/@phamn23) | Helped w/ markdown parsing
+* [SixBeeps](https://replit.com/@SixBeeps) | Helped w/ markdown parsing
+* [Buddy](https://replit.com/@bddy) 
 * [Icemaster](https://replit.com/@IcemasterEric)
 
 ## To do:
-2. Logs
-3. Add login system
-4. View who has searched for you
-5. Fix api
-6. Integrate graphql
+1. Integrate graphql
+2. Add login system
+4. User dashboard
+
