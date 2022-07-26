@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block other %}
+<div id="readme_text"></div>
+<script src="  https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
+<script>
+    async function fetchTest() {
+    var converter = new showdown.Converter();
+    let response = await fetch('/README.md');
+    let responseText = await response.text();
+    readme_text = converter.makeHtml(responseText);
+
+    document.getElementById('readme_text').innerHTML = readme_text;
+}
+
+(async() => {
+    await fetchTest();
+})();
+</script>
+{% endblock %}

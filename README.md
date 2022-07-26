@@ -20,3 +20,8 @@ Special Thanks to
 2. Add login system
 4. User dashboard
 
+## Repositories
+Github (Backup) | <https://github.com/Cosmic6811/Cosmic-s-Replit-Live-Follower-Count>
+
+Replit (Active development) | <https://replit.com/@CosmicBear/Cosmics-Replit-Live-Follower-Count?v=1>
+

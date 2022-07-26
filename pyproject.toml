@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "python-template"
-version = "0.1.0"
+name = "Cosmic's Live Follower Count"
+version = "2.3.2"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Cosmic <jaden@cosmic.tk>"]
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.9"

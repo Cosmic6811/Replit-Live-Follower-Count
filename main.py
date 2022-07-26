@@ -8,6 +8,8 @@ import threading
 global yo;
 yo = 0;
 
+current_version = "2.3.2"
+
 def printit(username):
   threading.Timer(2.0, printit,).start()
   profile = requests.get(f"https://replit.com/@{username}").text
@@ -42,15 +44,18 @@ def api(username):
 def home():
     if request.method == "POST":
         username = request.form["username"]
-        return redirect(f'/{username}')
-    return render_template('first.html')
+        return redirect(f'/u/{username}')
+    return render_template('first.html',version=current_version)
 @app.get('/README.md')
-def readme():
+def readmePage():
     with open("README.md","r") as f:
         return str(f.read())
-@app.route("/<username>")
+@app.get("/about")
+def aboutPage():
+    return render_template('about.html')
+@app.route("/u/<username>")
 def index(username):
-    '''if username == None:
+    '''if use/rname == None:
         return redirect('/CosmicBear')
     #entry = os.path.join('index.html')'''
     return render_template("index.html",username=username)
