@@ -16,9 +16,8 @@ Special Thanks to
 * [Icemaster](https://replit.com/@IcemasterEric)
 
 ## To Do / Future Features:
-1. Integrate graphql
-2. Add login system
-4. User dashboard
+1. Add login system
+2. Data collection
 
 ## Repositories
 Github (Backup) | <https://github.com/Cosmic6811/Cosmic-s-Replit-Live-Follower-Count>

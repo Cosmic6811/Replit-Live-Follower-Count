@@ -12,7 +12,8 @@
 {% block other %}
 <script>
     function fetchf() {
-           fetch('/api/{{ username }}').then((y) => y.text()).then((e) => {
+          // fetch('/api/{{ username }}').then((y) => y.text()).then((e) => { //Old api | no longer used
+        fetch('/api/gql/{{ username }}?q=followerCount').then((y) => y.text()).then((e) => {
         document.getElementById("cnt").innerHTML = e
     })
     }
